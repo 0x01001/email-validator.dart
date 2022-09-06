@@ -347,7 +347,7 @@ class EmailValidator {
       [bool allowTopLevelDomains = false, bool allowInternational = true]) {
     _index = 0;
 
-    if (email.isEmpty || email.length >= 255) {
+    if (email.isEmpty || email.length > 256) {
       return false;
     }
 
